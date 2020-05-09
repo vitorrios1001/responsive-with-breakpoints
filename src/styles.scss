@@ -1,0 +1,51 @@
+@import './styles/mixins/breakpoints';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: lightslategrey;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 2rem;
+    }
+    span {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .container {
+    background-color: hotpink;
+    .content {
+      p {
+        font-size: 2.25rem;
+      }
+      span {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@include breakpoint(desktop) {
+  .container {
+    background-color: green;
+
+    .content {
+      p {
+        font-size: 2.5rem;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
